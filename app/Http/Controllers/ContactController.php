@@ -15,10 +15,9 @@ class ContactController extends Controller
     }
     public function store(Request $request)
     {
-        $sent = Mail::to('guilhermesouza120903@gmail.com','Guilherme')->send(new Contact([
+        $sent = Mail::to('guilherme003souza@gmail.com','Guilherme')->send(new Contact([
             'fromname'=> $request->nome,
             'fromemail'=> $request->email,
-            'assunto'=> $request->assunto,
             'assunto'=> $request->assunto,
             'mensagem'=> $request->mensagem
         ]));
